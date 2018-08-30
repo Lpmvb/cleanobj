@@ -11,6 +11,7 @@ test('clean object', () => {
       c: { a: { a: null } },
     },
     e: [null, { a: 1 }, { b: { a: {}, b: undefined } }, [1]],
+    f: [ { a: {} } ],
   };
   const exp = {
     a: 1,
