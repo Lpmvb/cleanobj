@@ -23,6 +23,6 @@ test('clean object', () => {
     },
     e: [null, { a: 1 }, [1]],
   };
-  cleanobj(obj);
-  expect(JSON.stringify(obj)).toBe(JSON.stringify(exp));
+  const res = cleanobj(obj);
+  expect(JSON.stringify(res)).toBe(JSON.stringify(exp));
 });

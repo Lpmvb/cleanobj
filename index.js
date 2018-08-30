@@ -22,6 +22,7 @@ function cleanobj(obj) {
       }
     }
   }
+  return obj;
 }
 
 module.exports = cleanobj;
