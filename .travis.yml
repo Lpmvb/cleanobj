@@ -1,0 +1,12 @@
+language: node_js
+notifications:
+  email: false
+node_js:
+  - '10'
+  - '8'
+install:
+  - npm i
+script:
+  - npm test
+after_script:
+  - npm i codecov && codecov
