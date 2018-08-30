@@ -1,5 +1,8 @@
 # cleanobj
 
+[![Build Status](https://travis-ci.org/Lpmvb/cleanobj.svg?branch=master)](https://travis-ci.org/Lpmvb/cleanobj)
+[![codecov](https://codecov.io/gh/Lpmvb/cleanobj/branch/master/graph/badge.svg)](https://codecov.io/gh/Lpmvb/cleanobj)
+
 Remove empty and undefined attributes of object.
 
 ## install
