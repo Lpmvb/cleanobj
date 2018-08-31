@@ -17,7 +17,10 @@ function cleanobj(obj) {
     }
     if (type === '[object Object]') {
       cleanobj(obj[key]);
-      if (Object.keys(obj[key]).length === 0) {
+      if (
+        Object.keys(obj[key]).length === 0 &&
+        Object.getOwnPropertySymbols(obj[key]).length === 0
+      ) {
         delete obj[key];
       }
     }

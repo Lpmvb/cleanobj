@@ -11,7 +11,9 @@ test('clean object', () => {
       c: { a: { a: null } },
     },
     e: [null, { a: 1 }, { b: { a: {}, b: undefined } }, [1]],
-    f: [ { a: {} } ],
+    f: [{ a: {} }],
+    g: [ { [Symbol('foo')]: '1' }, Symbol('xyz') ],
+    h: Symbol('bar'),
   };
   const exp = {
     a: 1,
@@ -22,7 +24,10 @@ test('clean object', () => {
       c: { a: { a: null } },
     },
     e: [null, { a: 1 }, [1]],
+    g: [ { [Symbol('foo')]: '1' }, Symbol('xyz') ],
+    h: Symbol('bar'),
   };
   const res = cleanobj(obj);
+  console.log(require('util').inspect(res, { depth: null }));
   expect(JSON.stringify(res)).toBe(JSON.stringify(exp));
 });
