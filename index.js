@@ -1,11 +1,12 @@
+/* eslint no-param-reassign: */
 function cleanobj(obj) {
-  for (const key of Object.keys(obj)) {
+  Object.keys(obj).forEach(key => {
     if (obj[key] === undefined) {
       delete obj[key];
-      continue;
+      return;
     }
     if (obj[key] === null) {
-      continue;
+      return;
     }
     const type = Object.prototype.toString.call(obj[key]);
     if (type === '[object Array]') {
@@ -24,7 +25,7 @@ function cleanobj(obj) {
         delete obj[key];
       }
     }
-  }
+  });
   return obj;
 }
 

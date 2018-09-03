@@ -12,7 +12,7 @@ test('clean object', () => {
     },
     e: [null, { a: 1 }, { b: { a: {}, b: undefined } }, [1]],
     f: [{ a: {} }],
-    g: [ { [Symbol('foo')]: '1' }, Symbol('xyz') ],
+    g: [{ [Symbol('foo')]: '1' }, Symbol('xyz')],
     h: Symbol('bar'),
   };
   const exp = {
@@ -24,7 +24,7 @@ test('clean object', () => {
       c: { a: { a: null } },
     },
     e: [null, { a: 1 }, [1]],
-    g: [ { [Symbol('foo')]: '1' }, Symbol('xyz') ],
+    g: [{ [Symbol('foo')]: '1' }, Symbol('xyz')],
     h: Symbol('bar'),
   };
   const res = cleanobj(obj);
